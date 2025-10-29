@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">LKKF Logotipas</title>
+  <desc id="desc">Stilizuotas Kyokushin karatė simbolis raudoname rate</desc>
+  <circle cx="60" cy="60" r="58" fill="none" stroke="#111" stroke-width="4" />
+  <circle cx="60" cy="60" r="40" fill="#c62828" opacity="0.85" />
+  <path d="M60 20 L72 60 L60 100 L48 60 Z" fill="#fff" opacity="0.9" />
+  <circle cx="60" cy="60" r="10" fill="#111" opacity="0.9" />
+</svg>

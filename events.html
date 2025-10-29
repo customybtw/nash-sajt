@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lietuvos Kyokushin Karatė Federacijos renginių kalendorius, registracija ir galerijos.">
+    <title>LKKF renginiai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="site-header" aria-label="Pagrindinė navigacija">
+        <div class="container header-inner">
+            <a class="logo" href="index.html" aria-label="Grįžti į pradžią">
+                <img src="assets/img/logo.svg" alt="LKKF logotipas" onerror="this.style.display='none'">
+                <span>Lietuvos Kyokushin Karatė Federacija</span>
+            </a>
+            <button class="menu-toggle" aria-label="Perjungti navigaciją" aria-expanded="false" aria-controls="primary-navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="primary-navigation" class="primary-nav" aria-label="Pagrindinis meniu">
+                <ul>
+                    <li><a href="index.html">Pradžia</a></li>
+                    <li><a href="members.html">LKKF nariai</a></li>
+                    <li><a href="events.html" class="active">Renginiai</a></li>
+                    <li><a href="documents.html">Dokumentai</a></li>
+                    <li><a href="contact.html">Kontaktai</a></li>
+                    <li><a href="https://is.kyokushin.lt" target="_blank" rel="noopener">IS</a></li>
+                    <li><a href="https://www.facebook.com/shinkyokushinlt" target="_blank" rel="noopener">Facebook</a></li>
+                    <li><a href="https://www.shinkyokushin.lt" target="_blank" rel="noopener">Draugiški klubai</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero" aria-labelledby="events-heading">
+            <div class="container narrow">
+                <h1 id="events-heading">Renginių kalendorius</h1>
+                <p>Organizuojame nacionalines ir tarptautines varžybas, stovyklas, seminarus ir mokymus. Sek kalendorių ir registruokis į artimiausius renginius.</p>
+            </div>
+        </section>
+
+        <section class="filters" aria-label="Renginių filtrai">
+            <div class="container filter-grid">
+                <div class="filter-group">
+                    <label for="event-type-filter">Renginio tipas</label>
+                    <select id="event-type-filter" name="event-type-filter">
+                        <option value="visi">Visi renginiai</option>
+                        <option value="turnyras">Turnyrai</option>
+                        <option value="seminaras">Seminarai</option>
+                        <option value="stovykla">Stovyklos</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="event-region-filter">Regionas</label>
+                    <select id="event-region-filter" name="event-region-filter">
+                        <option value="visi">Visi</option>
+                        <option value="vilnius">Vilnius</option>
+                        <option value="kaunas">Kaunas</option>
+                        <option value="klaipeda">Klaipėda</option>
+                        <option value="siauliai">Šiauliai</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="event-date-filter">Data</label>
+                    <input id="event-date-filter" name="event-date-filter" type="date">
+                </div>
+            </div>
+        </section>
+
+        <section class="events" aria-labelledby="upcoming-heading">
+            <div class="container">
+                <h2 id="upcoming-heading">Artėjantys renginiai</h2>
+                <div id="events-list" class="cards" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="registration" aria-labelledby="registration-heading">
+            <div class="container split">
+                <div>
+                    <h2 id="registration-heading">Registracija į renginį</h2>
+                    <p>Užpildyk formą ir patvirtink dalyvavimą artimiausiame renginyje. Gavę paraišką, atsiųsime el. laišką su papildoma informacija ir apmokėjimo instrukcija.</p>
+                    <form id="event-registration-form" novalidate>
+                        <div class="form-group">
+                            <label for="participant-name">Dalyvio vardas ir pavardė</label>
+                            <input id="participant-name" name="participant-name" type="text" placeholder="Vardenis Pavardenis" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="participant-email">El. paštas</label>
+                            <input id="participant-email" name="participant-email" type="email" placeholder="vardas@pastas.lt" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="participant-club">Klubas</label>
+                            <input id="participant-club" name="participant-club" type="text" placeholder="Klubo pavadinimas" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-select">Pasirink renginį</label>
+                            <select id="event-select" name="event-select" required>
+                                <option value="">Pasirinkite renginį</option>
+                            </select>
+                        </div>
+                        <button class="button primary" type="submit">Registruotis</button>
+                        <p class="form-feedback" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+                <aside>
+                    <h2>Praėjusių renginių galerija</h2>
+                    <div class="past-gallery" aria-live="polite"></div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" aria-label="Puslapio poraštė">
+        <div class="container footer-grid">
+            <div>
+                <h3>LKKF</h3>
+                <p>Oficiali Lietuvos Kyokushin Karatė Federacijos svetainė. Telkiame bendruomenę, puoselėjame tradicijas ir diegiame modernius sprendimus sportui.</p>
+            </div>
+            <div>
+                <h3>Sekite mus</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/shinkyokushinlt" target="_blank" rel="noopener">Facebook</a></li>
+                    <li><a href="https://www.shinkyokushin.lt" target="_blank" rel="noopener">Draugiški klubai</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Teisinė informacija</h3>
+                <p>&copy; <span id="copyright-year"></span> Lietuvos Kyokushin Karatė Federacija. Visos teisės saugomos.</p>
+                <a href="documents.html#privacy">Privatumo politika</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o9N1j7kPstvZx0Q+c3FQJf4C+rqj+kg14O6gCk0pPAA=" crossorigin=""></script>
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
