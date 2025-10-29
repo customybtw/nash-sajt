@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="lt" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renginiai | LKKF</title>
+  <meta name="description" content="Kyokushin karatė renginių kalendorius, registracija ir galerijos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Pereiti prie turinio</a>
+  <header>
+    <div class="utility-bar" role="presentation">
+      <div class="language-switcher" aria-label="Kalbos pasirinkimas">
+        <button type="button" aria-pressed="true">LT</button>
+        <button type="button">EN</button>
+        <button type="button">RU</button>
+      </div>
+      <div class="utility-links">
+        <a href="index.html#anti-doping">Anti-dopingo informacija</a>
+        <a href="https://shinkyokushin.lt" target="_blank" rel="noopener">Draugiški klubai</a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <nav class="navbar" aria-label="Pagrindinis meniu">
+      <a class="navbar__logo" href="index.html">
+        <img src="assets/img/logo.svg" alt="LKKF logotipas" loading="lazy">
+        <span>LKKF</span>
+      </a>
+      <button class="navbar__toggle" type="button" aria-label="Perjungti meniu" aria-expanded="false">☰</button>
+      <ul class="navbar__menu" aria-expanded="false">
+        <li><a href="index.html">Pradžia</a></li>
+        <li><a href="members.html">LKKF nariai</a></li>
+        <li><a href="events.html" aria-current="page">Renginiai</a></li>
+        <li><a href="documents.html">Dokumentai</a></li>
+        <li><a href="contact.html">Kontaktai</a></li>
+        <li><a href="https://lkkf-is.lt" target="_blank" rel="noopener">IS</a></li>
+        <li><a class="navbar__cta" href="contact.html#register">Registruokis</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+    <section class="section" aria-labelledby="eventsTitle">
+      <nav class="breadcrumbs" aria-label="Naršymo kelias">
+        <a href="index.html">Pradžia</a> / <span>Renginiai</span>
+      </nav>
+      <h1 id="eventsTitle" class="section__title">Renginių kalendorius</h1>
+      <p>Čia rasite artėjančius ir įvykusius Kyokushin karatė renginius. Filtruokite pagal tipą, statusą ar miestą.</p>
+
+      <form id="eventsFilters" class="filter-bar" aria-label="Renginių filtrai">
+        <input type="search" name="query" placeholder="Ieškoti pagal pavadinimą ar miestą">
+        <select name="type" aria-label="Renginio tipas">
+          <option value="">Visi tipai</option>
+          <option value="varžybos">Varžybos</option>
+          <option value="seminaras">Seminarai</option>
+          <option value="stovykla">Stovyklos</option>
+        </select>
+        <select name="status" aria-label="Registracijos būsena">
+          <option value="">Visos būsenos</option>
+          <option value="registracija">Vyksta registracija</option>
+          <option value="užpildyta">Vietų nėra</option>
+          <option value="netrukus">Netrukus</option>
+        </select>
+        <button class="btn btn--primary" type="submit">Filtruoti</button>
+      </form>
+
+      <div id="eventsList" class="events-list" aria-live="polite"></div>
+    </section>
+
+    <section class="section section--muted" aria-labelledby="pastEventsTitle">
+      <h2 id="pastEventsTitle" class="section__title">Praėjusių renginių galerija</h2>
+      <div class="gallery" aria-label="Praėjusių renginių nuotraukos">
+        <div class="gallery__track">
+          <figure class="gallery__slide">
+            <img data-src="assets/img/event-1.svg" alt="Sportininkai ant pakylos" loading="lazy">
+            <figcaption class="gallery__caption">2023 Lietuvos čempionatas</figcaption>
+          </figure>
+          <figure class="gallery__slide">
+            <img data-src="assets/img/event-2.svg" alt="Vaikų treniruotės stovykloje" loading="lazy">
+            <figcaption class="gallery__caption">Jaunimo stovykla</figcaption>
+          </figure>
+          <figure class="gallery__slide">
+            <img data-src="assets/img/event-3.svg" alt="Seminaro dalyviai salėje" loading="lazy">
+            <figcaption class="gallery__caption">Tarptautinis seminaras</figcaption>
+          </figure>
+        </div>
+        <div class="gallery__controls">
+          <button id="galleryPrev" class="gallery__button" type="button" aria-label="Ankstesnis kadras">‹</button>
+          <button id="galleryNext" class="gallery__button" type="button" aria-label="Kitas kadras">›</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__column">
+        <h4>Lietuvos Kyokushin karatė federacija</h4>
+        <p>Oficialus Kyokushin karatė renginių kalendorius.</p>
+      </div>
+      <div class="footer__column">
+        <h4>Greitos nuorodos</h4>
+        <ul class="footer__links">
+          <li><a href="members.html">Nariai</a></li>
+          <li><a href="documents.html">Dokumentai</a></li>
+          <li><a href="contact.html">Kontaktai</a></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h4>Socialiniai tinklai</h4>
+        <div class="footer__social">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"></a>
+        </div>
+      </div>
+      <div class="footer__column">
+        <h4>Teisinė informacija</h4>
+        <ul class="footer__links">
+          <li><a href="documents.html#anti-doping">Anti-dopingas</a></li>
+          <li><a href="documents.html">Privatumo politika</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> LKKF. Visos teisės saugomos.</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearElement = document.getElementById('year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+</body>
+</html>

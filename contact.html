@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="lt" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontaktai | LKKF</title>
+  <meta name="description" content="Susisiekite su Lietuvos Kyokushin karatė federacija: kontaktai, forma ir žemėlapis.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-1A0OEtS5jzX5qX6Ch12HaxJXiiMHDL/95B2S/bR7f3s=" crossorigin="">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Pereiti prie turinio</a>
+  <header>
+    <div class="utility-bar" role="presentation">
+      <div class="language-switcher" aria-label="Kalbos pasirinkimas">
+        <button type="button" aria-pressed="true">LT</button>
+        <button type="button">EN</button>
+        <button type="button">RU</button>
+      </div>
+      <div class="utility-links">
+        <a href="index.html#anti-doping">Anti-dopingo informacija</a>
+        <a href="https://shinkyokushin.lt" target="_blank" rel="noopener">Draugiški klubai</a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <nav class="navbar" aria-label="Pagrindinis meniu">
+      <a class="navbar__logo" href="index.html">
+        <img src="assets/img/logo.svg" alt="LKKF logotipas" loading="lazy">
+        <span>LKKF</span>
+      </a>
+      <button class="navbar__toggle" type="button" aria-label="Perjungti meniu" aria-expanded="false">☰</button>
+      <ul class="navbar__menu" aria-expanded="false">
+        <li><a href="index.html">Pradžia</a></li>
+        <li><a href="members.html">LKKF nariai</a></li>
+        <li><a href="events.html">Renginiai</a></li>
+        <li><a href="documents.html">Dokumentai</a></li>
+        <li><a href="contact.html" aria-current="page">Kontaktai</a></li>
+        <li><a href="https://lkkf-is.lt" target="_blank" rel="noopener">IS</a></li>
+        <li><a class="navbar__cta" href="#register">Susisiekite</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+    <section class="section" aria-labelledby="contactTitle">
+      <nav class="breadcrumbs" aria-label="Naršymo kelias">
+        <a href="index.html">Pradžia</a> / <span>Kontaktai</span>
+      </nav>
+      <h1 id="contactTitle" class="section__title">Susisiekite su mumis</h1>
+      <p>Esame pasiruošę atsakyti į jūsų klausimus apie narystę, renginius ar dokumentus.</p>
+
+      <div class="contact-grid">
+        <article class="contact-card">
+          <h2>Federacijos biuras</h2>
+          <p>Žalgirio g. 1, LT-09300 Vilnius</p>
+          <p><a href="tel:+37060000000">+370 600 00000</a></p>
+          <p><a href="mailto:info@kyokushin.lt">info@kyokushin.lt</a></p>
+          <div class="tag-list">
+            <span class="tag">Darbo laikas: I–V 09:00–17:00</span>
+          </div>
+        </article>
+        <article class="contact-card" id="register">
+          <h2>Siųsti užklausą</h2>
+          <div class="alert" data-alert hidden aria-live="polite"></div>
+          <form id="contactForm" class="form" action="#">
+            <label for="contactName">Vardas ir pavardė *</label>
+            <input id="contactName" name="name" type="text" placeholder="Jūsų vardas" required>
+
+            <label for="contactEmail">El. paštas *</label>
+            <input id="contactEmail" name="email" type="email" placeholder="vardas@pastas.lt" required>
+
+            <label for="contactTopic">Tema</label>
+            <select id="contactTopic" name="topic">
+              <option value="Bendras klausimas">Bendras klausimas</option>
+              <option value="Narystė">Narystė</option>
+              <option value="Renginiai">Renginiai</option>
+              <option value="Dokumentai">Dokumentai</option>
+            </select>
+
+            <label for="contactMessage">Žinutė *</label>
+            <textarea id="contactMessage" name="message" placeholder="Parašykite savo žinutę" required></textarea>
+
+            <button class="btn btn--primary" type="submit">Siųsti</button>
+          </form>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--muted" aria-labelledby="mapTitle">
+      <h2 id="mapTitle" class="section__title">Aplankykite mus</h2>
+      <div id="clubsMap" class="map-container" role="application" aria-label="Federacijos biuro žemėlapis"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__column">
+        <h4>Lietuvos Kyokushin karatė federacija</h4>
+        <p>Susisiekite su mumis bet kuriuo metu.</p>
+      </div>
+      <div class="footer__column">
+        <h4>Kontaktai</h4>
+        <ul class="footer__links">
+          <li><a href="mailto:info@kyokushin.lt">info@kyokushin.lt</a></li>
+          <li><a href="tel:+37060000000">+370 600 00000</a></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h4>Socialiniai tinklai</h4>
+        <div class="footer__social">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"></a>
+        </div>
+      </div>
+      <div class="footer__column">
+        <h4>Teisinė informacija</h4>
+        <ul class="footer__links">
+          <li><a href="documents.html#anti-doping">Anti-dopingas</a></li>
+          <li><a href="documents.html">Dokumentai</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> LKKF. Visos teisės saugomos.</span>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o9N1j7kG9q4+U02zszgdWzxjaI9zBs+f2e1N1ItbS68=" crossorigin=""></script>
+  <script src="assets/js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearElement = document.getElementById('year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+</body>
+</html>
