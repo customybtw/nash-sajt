@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111" />
+      <stop offset="100%" stop-color="#c8102e" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#grad)" />
+  <text x="50%" y="50%" font-size="64" fill="#fff" font-family="Poppins, Arial, sans-serif" text-anchor="middle">LKKF</text>
+  <text x="50%" y="65%" font-size="32" fill="#fff" font-family="Poppins, Arial, sans-serif" text-anchor="middle">Kyokushin komanda</text>
+</svg>

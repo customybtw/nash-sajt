@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f5f5" />
+      <stop offset="100%" stop-color="#d1d1d1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#sky)" />
+  <path d="M0 360 L200 240 L320 340 L450 220 L600 320 L800 240 L800 480 L0 480 Z" fill="#c8102e" opacity="0.8" />
+  <text x="50%" y="55%" font-size="48" fill="#111" font-family="Poppins, Arial, sans-serif" text-anchor="middle">Vasaros stovykla</text>
+  <text x="50%" y="68%" font-size="24" fill="#111" font-family="Poppins, Arial, sans-serif" text-anchor="middle">Bendruomenė ir patirtis</text>
+</svg>
