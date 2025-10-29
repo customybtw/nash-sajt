@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="lt" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LKKF nariai</title>
+  <meta name="description" content="Lietuvos Kyokushin karatė federacijos nariai ir klubai.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Pereiti prie turinio</a>
+  <header>
+    <div class="utility-bar" role="presentation">
+      <div class="language-switcher" aria-label="Kalbos pasirinkimas">
+        <button type="button" aria-pressed="true">LT</button>
+        <button type="button">EN</button>
+        <button type="button">RU</button>
+      </div>
+      <div class="utility-links">
+        <a href="index.html#anti-doping">Anti-dopingo informacija</a>
+        <a href="https://shinkyokushin.lt" target="_blank" rel="noopener">Draugiški klubai</a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <nav class="navbar" aria-label="Pagrindinis meniu">
+      <a class="navbar__logo" href="index.html">
+        <img src="assets/img/logo.svg" alt="LKKF logotipas" loading="lazy">
+        <span>LKKF</span>
+      </a>
+      <button class="navbar__toggle" type="button" aria-label="Perjungti meniu" aria-expanded="false">☰</button>
+      <ul class="navbar__menu" aria-expanded="false">
+        <li><a href="index.html">Pradžia</a></li>
+        <li><a href="members.html" aria-current="page">LKKF nariai</a></li>
+        <li><a href="events.html">Renginiai</a></li>
+        <li><a href="documents.html">Dokumentai</a></li>
+        <li><a href="contact.html">Kontaktai</a></li>
+        <li><a href="https://lkkf-is.lt" target="_blank" rel="noopener">IS</a></li>
+        <li><a class="navbar__cta" href="index.html#join">Prisijunk</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+    <section class="section" aria-labelledby="membersTitle">
+      <nav class="breadcrumbs" aria-label="Naršymo kelias">
+        <a href="index.html">Pradžia</a> / <span>LKKF nariai</span>
+      </nav>
+      <h1 id="membersTitle" class="section__title">LKKF nariai</h1>
+      <p>Federaciją sudaro klubai iš visos Lietuvos. Žemiau pateikiamas sąrašas su kontaktais ir specializacijomis.</p>
+
+      <div class="filter-bar">
+        <input type="search" id="memberSearch" placeholder="Ieškoti klubo ar miesto">
+        <select id="memberRegion">
+          <option value="">Visi regionai</option>
+          <option value="Vilnius">Vilniaus regionas</option>
+          <option value="Kaunas">Kauno regionas</option>
+          <option value="Klaipėda">Klaipėdos regionas</option>
+          <option value="Šiauliai">Šiaulių regionas</option>
+        </select>
+      </div>
+
+      <table class="table" aria-describedby="membersTitle">
+        <thead>
+          <tr>
+            <th scope="col">Klubas</th>
+            <th scope="col">Miestas</th>
+            <th scope="col">Kontaktai</th>
+            <th scope="col">Specializacija</th>
+          </tr>
+        </thead>
+        <tbody id="membersTable">
+          <tr data-region="Vilnius">
+            <td>Vilniaus Kyokushin centras</td>
+            <td>Vilnius</td>
+            <td><a href="mailto:vilnius@kyokushin.lt">vilnius@kyokushin.lt</a></td>
+            <td>Sportinis ir vaikų karatė</td>
+          </tr>
+          <tr data-region="Kaunas">
+            <td>Kauno Bushido klubas</td>
+            <td>Kaunas</td>
+            <td><a href="mailto:kaunas@kyokushin.lt">kaunas@kyokushin.lt</a></td>
+            <td>Suaugusiųjų treniruotės</td>
+          </tr>
+          <tr data-region="Klaipėda">
+            <td>Klaipėdos Dojo</td>
+            <td>Klaipėda</td>
+            <td><a href="mailto:klaipeda@kyokushin.lt">klaipeda@kyokushin.lt</a></td>
+            <td>Vaikų ir jaunimo programos</td>
+          </tr>
+          <tr data-region="Šiauliai">
+            <td>Šiaulių Kovos menų akademija</td>
+            <td>Šiauliai</td>
+            <td><a href="mailto:siauliai@kyokushin.lt">siauliai@kyokushin.lt</a></td>
+            <td>Varžybinė komanda</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section section--muted" aria-labelledby="partnersTitle">
+      <h2 id="partnersTitle" class="section__title">Partneriai ir draugiški klubai</h2>
+      <p>Bendradarbiaujame su <a href="https://shinkyokushin.lt" target="_blank" rel="noopener">shinkyokushin.lt</a> ir kitomis tarptautinėmis organizacijomis, kad sportininkai galėtų dalyvauti bendrose stovyklose ir seminaruose.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__column">
+        <h4>Lietuvos Kyokushin karatė federacija</h4>
+        <p>Oficiali Kyokushin karatė organizacija Lietuvoje.</p>
+      </div>
+      <div class="footer__column">
+        <h4>Nuorodos</h4>
+        <ul class="footer__links">
+          <li><a href="index.html#anti-doping">Anti-dopingas</a></li>
+          <li><a href="events.html">Renginiai</a></li>
+          <li><a href="documents.html">Dokumentai</a></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h4>Kontaktai</h4>
+        <ul class="footer__links">
+          <li><a href="mailto:info@kyokushin.lt">info@kyokushin.lt</a></li>
+          <li><a href="tel:+37060000000">+370 600 00000</a></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h4>Sekite mus</h4>
+        <div class="footer__social">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> LKKF. Visos teisės saugomos.</span>
+      <a href="documents.html">Teisinė informacija</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearElement = document.getElementById('year');
+      const rows = Array.from(document.querySelectorAll('#membersTable tr'));
+      const search = document.getElementById('memberSearch');
+      const region = document.getElementById('memberRegion');
+
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+
+      const applyFilters = () => {
+        const query = (search?.value || '').toLowerCase();
+        const regionValue = region?.value || '';
+
+        rows.forEach((row) => {
+          const text = row.textContent?.toLowerCase() || '';
+          const matchesQuery = text.includes(query);
+          const matchesRegion = !regionValue || row.dataset.region === regionValue;
+          row.hidden = !(matchesQuery && matchesRegion);
+        });
+      };
+
+      search?.addEventListener('input', applyFilters);
+      region?.addEventListener('change', applyFilters);
+    });
+  </script>
+</body>
+</html>

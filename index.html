@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="lt" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lietuvos Kyokushin Karatė federacija – oficiali Kyokushin karatė organizacija Lietuvoje.">
+  <title>Lietuvos Kyokushin Karatė Federacija</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-1A0OEtS5jzX5qX6Ch12HaxJXiiMHDL/95B2S/bR7f3s=" crossorigin="">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Pereiti prie turinio</a>
+  <header>
+    <div class="utility-bar" role="presentation">
+      <div class="language-switcher" aria-label="Kalbos pasirinkimas">
+        <button type="button" aria-pressed="true">LT</button>
+        <button type="button">EN</button>
+        <button type="button">RU</button>
+      </div>
+      <div class="utility-links">
+        <a href="#anti-doping">Anti-dopingo informacija</a>
+        <a href="https://shinkyokushin.lt" target="_blank" rel="noopener">Draugiški klubai</a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <nav class="navbar" aria-label="Pagrindinis meniu">
+      <a class="navbar__logo" href="index.html">
+        <img src="assets/img/logo.svg" alt="LKKF logotipas" loading="lazy">
+        <span>LKKF</span>
+      </a>
+      <button class="navbar__toggle" type="button" aria-label="Perjungti meniu" aria-expanded="false">☰</button>
+      <ul class="navbar__menu" aria-expanded="false">
+        <li><a href="index.html" aria-current="page">Pradžia</a></li>
+        <li><a href="members.html">LKKF nariai</a></li>
+        <li><a href="events.html">Renginiai</a></li>
+        <li><a href="documents.html">Dokumentai</a></li>
+        <li><a href="contact.html">Kontaktai</a></li>
+        <li><a href="https://lkkf-is.lt" target="_blank" rel="noopener">IS</a></li>
+        <li><a class="navbar__cta" href="#join">Prisijunk prie federacijos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero__content">
+        <h1 id="heroTitle">Lietuvos Kyokushin karatė federacija</h1>
+        <p>Vienijame stipriausius Kyokushin karatė klubus, sportininkus ir trenerius Lietuvoje. Skatiname kovos menų meistriškumą, sporto dvasią ir bendruomenę.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#news">Naujausios naujienos</a>
+          <a class="btn btn--secondary" href="events.html">Artėjantys renginiai</a>
+        </div>
+      </div>
+      <div class="hero__media">
+        <div class="gallery" aria-label="Foto galerija">
+          <div class="gallery__track">
+            <figure class="gallery__slide">
+              <img data-src="assets/img/gallery-1.svg" alt="Kovotojai Kyokushin ringe" loading="lazy">
+              <figcaption class="gallery__caption">Lietuvos čempionato akimirkos</figcaption>
+            </figure>
+            <figure class="gallery__slide">
+              <img data-src="assets/img/gallery-2.svg" alt="Treniruočių stovykla prie jūros" loading="lazy">
+              <figcaption class="gallery__caption">Vasaros stovykla Palangoje</figcaption>
+            </figure>
+            <figure class="gallery__slide">
+              <img data-src="assets/img/gallery-3.svg" alt="Teisėjų seminaro dalyviai" loading="lazy">
+              <figcaption class="gallery__caption">Trenerių ir teisėjų tobulinimasis</figcaption>
+            </figure>
+          </div>
+          <div class="gallery__controls">
+            <button id="galleryPrev" class="gallery__button" type="button" aria-label="Ankstesnis kadras">‹</button>
+            <button id="galleryNext" class="gallery__button" type="button" aria-label="Kitas kadras">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="section section--muted" aria-labelledby="newsTitle">
+      <h2 id="newsTitle" class="section__title">Naujienų srautas</h2>
+      <div id="newsTicker" class="news-ticker" role="list" aria-live="polite"></div>
+    </section>
+
+    <section class="section" aria-labelledby="aboutTitle">
+      <h2 id="aboutTitle" class="section__title">Apie federaciją</h2>
+      <div class="cards-grid">
+        <article class="card">
+          <span class="card__icon" aria-hidden="true">🥋</span>
+          <h3 class="card__title">Mūsų misija</h3>
+          <p>Puoselėti Kyokushin karatė tradicijas Lietuvoje, skatinti sportininkų meistriškumą ir bendruomenės augimą visose amžiaus grupėse.</p>
+        </article>
+        <article class="card">
+          <span class="card__icon" aria-hidden="true">🌍</span>
+          <h3 class="card__title">Tarptautinis ryšys</h3>
+          <p>Bendradarbiaujame su pasaulinėmis Kyokushin organizacijomis ir draugiškais klubais – shinkyokushin.lt bei kitais partneriais.</p>
+        </article>
+        <article class="card">
+          <span class="card__icon" aria-hidden="true">🤝</span>
+          <h3 class="card__title">Bendruomenė</h3>
+          <p>Federacija vienija virš 50 klubų ir 3000 narių. Visiems užtikriname vienodas galimybes siekti sporto aukštumų.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--muted" id="join" aria-labelledby="joinTitle">
+      <h2 id="joinTitle" class="section__title">Prisijunk prie federacijos</h2>
+      <div class="cards-grid">
+        <article class="card">
+          <h3 class="card__title">Tapk nariu</h3>
+          <p>Klubai ir sportininkai gali prisijungti prie federacijos užpildę elektroninę paraišką.</p>
+          <form class="form js-registration-form" action="#">
+            <label for="clubName">Klubo pavadinimas *</label>
+            <input id="clubName" name="name" type="text" placeholder="Pvz., Vilniaus dojo" required>
+            <label for="clubEmail">El. paštas *</label>
+            <input id="clubEmail" name="email" type="email" placeholder="info@klubas.lt" required>
+            <button class="btn btn--primary" type="submit">Siųsti paraišką</button>
+          </form>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Anti-dopingo informacija</h3>
+          <p id="anti-doping">Laikomės WADA reikalavimų ir šviečiame sportininkus apie švaraus sporto svarbą.</p>
+          <a class="btn btn--secondary" href="documents.html#anti-doping">Plačiau apie anti-dopingą</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="mapTitle">
+      <h2 id="mapTitle" class="section__title">Federacijos klubai</h2>
+      <div class="filter-bar">
+        <label for="clubSearch" class="visually-hidden">Ieškoti klubo</label>
+        <input id="clubSearch" type="search" placeholder="Ieškoti pagal pavadinimą">
+        <label for="clubRegion" class="visually-hidden">Filtruoti pagal regioną</label>
+        <select id="clubRegion">
+          <option value="">Visi regionai</option>
+          <option value="Vilnius">Vilniaus regionas</option>
+          <option value="Kaunas">Kauno regionas</option>
+          <option value="Klaipėda">Klaipėdos regionas</option>
+          <option value="Šiauliai">Šiaulių regionas</option>
+        </select>
+      </div>
+      <div id="clubsMap" class="map-container" role="application" aria-label="Federacijos klubų žemėlapis"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__column">
+        <h4>Lietuvos Kyokushin karatė federacija</h4>
+        <p>Oficiali Kyokushin karatė organizacija Lietuvoje, atstovaujanti sportininkus nacionaliniu ir tarptautiniu lygmeniu.</p>
+      </div>
+      <div class="footer__column">
+        <h4>Naudingos nuorodos</h4>
+        <ul class="footer__links">
+          <li><a href="members.html">LKKF nariai</a></li>
+          <li><a href="events.html">Renginiai</a></li>
+          <li><a href="documents.html">Dokumentai</a></li>
+          <li><a href="https://shinkyokushin.lt" target="_blank" rel="noopener">Draugiški klubai</a></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h4>Kontaktai</h4>
+        <ul class="footer__links">
+          <li><a href="mailto:info@kyokushin.lt">info@kyokushin.lt</a></li>
+          <li><a href="tel:+37060000000">+370 600 00000</a></li>
+          <li>Žalgirio g. 1, Vilnius</li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h4>Sekite mus</h4>
+        <div class="footer__social">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> LKKF. Visos teisės saugomos.</span>
+      <a href="documents.html">Teisinė informacija</a>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o9N1j7kG9q4+U02zszgdWzxjaI9zBs+f2e1N1ItbS68=" crossorigin=""></script>
+  <script src="assets/js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearElement = document.getElementById('year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+</body>
+</html>

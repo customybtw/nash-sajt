@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="lt" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dokumentai | LKKF</title>
+  <meta name="description" content="Lietuvos Kyokushin karatė federacijos dokumentai, formos ir sertifikatai.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Pereiti prie turinio</a>
+  <header>
+    <div class="utility-bar" role="presentation">
+      <div class="language-switcher" aria-label="Kalbos pasirinkimas">
+        <button type="button" aria-pressed="true">LT</button>
+        <button type="button">EN</button>
+        <button type="button">RU</button>
+      </div>
+      <div class="utility-links">
+        <a href="index.html#anti-doping">Anti-dopingo informacija</a>
+        <a href="https://shinkyokushin.lt" target="_blank" rel="noopener">Draugiški klubai</a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <nav class="navbar" aria-label="Pagrindinis meniu">
+      <a class="navbar__logo" href="index.html">
+        <img src="assets/img/logo.svg" alt="LKKF logotipas" loading="lazy">
+        <span>LKKF</span>
+      </a>
+      <button class="navbar__toggle" type="button" aria-label="Perjungti meniu" aria-expanded="false">☰</button>
+      <ul class="navbar__menu" aria-expanded="false">
+        <li><a href="index.html">Pradžia</a></li>
+        <li><a href="members.html">LKKF nariai</a></li>
+        <li><a href="events.html">Renginiai</a></li>
+        <li><a href="documents.html" aria-current="page">Dokumentai</a></li>
+        <li><a href="contact.html">Kontaktai</a></li>
+        <li><a href="https://lkkf-is.lt" target="_blank" rel="noopener">IS</a></li>
+        <li><a class="navbar__cta" href="#downloads">Parsisiųsti</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+    <section class="section" aria-labelledby="documentsTitle">
+      <nav class="breadcrumbs" aria-label="Naršymo kelias">
+        <a href="index.html">Pradžia</a> / <span>Dokumentai</span>
+      </nav>
+      <h1 id="documentsTitle" class="section__title">Federacijos dokumentai</h1>
+      <p>Visi aktualūs dokumentai, reglamentuojantys federacijos veiklą, narių priėmimą, anti-dopingo reikalavimus ir sertifikavimo procesus.</p>
+
+      <form id="documentsFilters" class="filter-bar" aria-label="Dokumentų filtrai">
+        <input type="search" name="query" placeholder="Ieškoti dokumento">
+        <select name="type" aria-label="Dokumento tipas">
+          <option value="">Visi tipai</option>
+          <option value="statutai">Statutai</option>
+          <option value="formos">Formos</option>
+          <option value="sertifikatai">Sertifikatai</option>
+        </select>
+        <button class="btn btn--primary" type="submit">Taikyti</button>
+      </form>
+
+      <div id="documentsList" class="documents-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="section section--muted" id="anti-doping" aria-labelledby="antiDopingTitle">
+      <h2 id="antiDopingTitle" class="section__title">Anti-dopingo politika</h2>
+      <p>Laikomės Pasaulinės antidopingo agentūros (WADA) kodekso. Visi federacijos nariai privalo susipažinti su draudžiamų medžiagų sąrašais ir testavimo procedūromis. Edukacinės sesijos vykdomos prieš svarbiausius renginius.</p>
+      <div class="tag-list" role="list">
+        <span class="tag" role="listitem">Edukacija</span>
+        <span class="tag" role="listitem">Prevencija</span>
+        <span class="tag" role="listitem">Skaidrumas</span>
+      </div>
+      <p>Detalesnę informaciją rasite dokumente „Anti-dopingo taisyklės“ ir svetainėje <a href="https://www.wada-ama.org" target="_blank" rel="noopener">wada-ama.org</a>.</p>
+    </section>
+
+    <section class="section" id="downloads" aria-labelledby="downloadsTitle">
+      <h2 id="downloadsTitle" class="section__title">Greitos nuorodos</h2>
+      <div class="cards-grid">
+        <article class="card">
+          <h3 class="card__title">Prisijungimo forma klubams</h3>
+          <p>Pateikite paraišką prisijungti prie LKKF naudodami skaitmeninę formą.</p>
+          <a class="btn btn--primary" href="#">Atsisiųsti PDF</a>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Sertifikavimo grafikas</h3>
+          <p>Metinis kvalifikacijos kėlimo ir egzaminų grafikas.</p>
+          <a class="btn btn--secondary" href="#">Peržiūrėti</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__column">
+        <h4>Lietuvos Kyokushin karatė federacija</h4>
+        <p>Teisinė informacija ir oficialūs dokumentai.</p>
+      </div>
+      <div class="footer__column">
+        <h4>Kontaktai</h4>
+        <ul class="footer__links">
+          <li><a href="mailto:info@kyokushin.lt">info@kyokushin.lt</a></li>
+          <li><a href="tel:+37060000000">+370 600 00000</a></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h4>Socialiniai tinklai</h4>
+        <div class="footer__social">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"></a>
+        </div>
+      </div>
+      <div class="footer__column">
+        <h4>Partneriai</h4>
+        <ul class="footer__links">
+          <li><a href="https://shinkyokushin.lt" target="_blank" rel="noopener">shinkyokushin.lt</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> LKKF. Visos teisės saugomos.</span>
+      <a href="#anti-doping">Anti-dopingo politika</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearElement = document.getElementById('year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+</body>
+</html>
