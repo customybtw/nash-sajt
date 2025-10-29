@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="lt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Susisiekite su Lietuvos Kyokushin Karatė federacija." />
+    <title>LKKF kontaktai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-o9N1j7kP1xP6AAw8gL8J7N1V7AElsuq4yA9Y5lH/0SY=" crossorigin="" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container navbar" aria-label="Pagrindinė navigacija">
+        <a class="brand" href="index.html">
+          <img src="assets/img/logo.svg" alt="LKKF logotipas" />
+          <span>Lietuvos Kyokushin Karatė Federacija</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>
+          ☰
+          <span class="sr-only">Meniu</span>
+        </button>
+        <nav>
+          <ul id="primary-navigation" class="nav-links" data-nav role="menubar">
+            <li role="none"><a role="menuitem" href="index.html">Pradžia</a></li>
+            <li role="none"><a role="menuitem" href="members.html">LKKF nariai</a></li>
+            <li role="none"><a role="menuitem" href="events.html">Renginiai</a></li>
+            <li role="none"><a role="menuitem" href="documents.html">Dokumentai</a></li>
+            <li role="none"><a role="menuitem" class="active" href="contact.html">Kontaktai</a></li>
+            <li role="none"><a role="menuitem" href="https://is.kyokushin.lt" target="_blank" rel="noopener">IS</a></li>
+            <li role="none"><a role="menuitem" href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section" id="kontaktai">
+      <div class="container">
+        <div class="section-header">
+          <h1>Susisiekite su mumis</h1>
+          <p>Užpildykite formą arba kreipkitės tiesiogiai – atsakysime per 1 darbo dieną.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h2>Kontaktinė informacija</h2>
+            <p>
+              Sporto g. 12, Vilnius<br />
+              El. paštas: <a href="mailto:info@kyokushin.lt">info@kyokushin.lt</a><br />
+              Telefonas: <a href="tel:+37060012345">+370 600 12345</a>
+            </p>
+            <p>Federacijos IS: <a href="https://is.kyokushin.lt" target="_blank" rel="noopener">is.kyokushin.lt</a></p>
+            <p>Socialiniai tinklai:</p>
+            <div class="social-links">
+              <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">in</a>
+            </div>
+          </article>
+          <article class="card">
+            <h2>Parašykite mums</h2>
+            <form class="form-row" data-contact-form>
+              <div class="form-row two-columns">
+                <div>
+                  <label for="name">Vardas *</label>
+                  <input id="name" name="name" type="text" placeholder="Jūsų vardas" required />
+                </div>
+                <div>
+                  <label for="email">El. paštas *</label>
+                  <input id="email" name="email" type="email" placeholder="vardas@pavarde.lt" required />
+                </div>
+              </div>
+              <div>
+                <label for="topic">Tema</label>
+                <input id="topic" name="topic" type="text" placeholder="Apie ką jūsų žinutė" />
+              </div>
+              <div>
+                <label for="message">Žinutė *</label>
+                <textarea id="message" name="message" rows="5" placeholder="Aprašykite savo klausimą ar pasiūlymą" required></textarea>
+              </div>
+              <div>
+                <button class="btn" type="submit">Siųsti žinutę</button>
+              </div>
+              <div data-contact-alert role="status" aria-live="polite"></div>
+            </form>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer aria-label="Poraštė">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>Lietuvos Kyokushin Karatė Federacija</h3>
+            <p>Sporto g. 12, Vilnius<br />El. paštas: <a href="mailto:info@kyokushin.lt">info@kyokushin.lt</a><br />Tel.: <a href="tel:+37060012345">+370 600 12345</a></p>
+            <div class="social-links" aria-label="Socialiniai tinklai">
+              <a href="https://www.facebook.com" aria-label="Facebook" target="_blank" rel="noopener">f</a>
+              <a href="https://www.instagram.com" aria-label="Instagram" target="_blank" rel="noopener">in</a>
+            </div>
+          </div>
+          <div>
+            <h4>Naudinga</h4>
+            <ul>
+              <li><a href="documents.html#antidopingas">Anti-dopingo informacija</a></li>
+              <li><a href="https://shinkyokushin.lt" target="_blank" rel="noopener">Draugiški klubai</a></li>
+              <li><a href="events.html#registracija">Renginių registracija</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Dokumentai</h4>
+            <ul>
+              <li><a href="documents.html">Statutai ir reglamentai</a></li>
+              <li><a href="documents.html">Formos klubams</a></li>
+              <li><a href="documents.html">Sertifikatai</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Darbo laikas</h4>
+            <p>Pirmadienis–Penktadienis 09:00–17:00<br />Šeštadienis–Sekmadienis uždaryta</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; <span data-year></span> Lietuvos Kyokushin Karatė Federacija. Visos teisės saugomos.</span>
+          <a href="documents.html#teisines-nuostatos">Teisinė informacija</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o9N1j7kP1xP6AAw8gL8J7N1V7AElsuq4yA9Y5lH/0SY=" crossorigin=""></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
