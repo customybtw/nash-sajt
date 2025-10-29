@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="lt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LKKF renginiai</title>
+    <meta name="description" content="LKKF renginių kalendorius ir registracija į varžybas bei stovyklas." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container navbar" aria-label="Pagrindinė navigacija">
+        <a class="logo" href="index.html">
+          <img
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20120%20120%27%3E%0A%3Ccircle%20cx%3D%2760%27%20cy%3D%2760%27%20r%3D%2755%27%20fill%3D%27%23ffffff%27%20stroke%3D%27%23c1121f%27%20stroke-width%3D%278%27%2F%3E%0A%3Cpath%20d%3D%27M60%2015%20L75%20105%20L60%2090%20L45%20105%20Z%27%20fill%3D%27%23c1121f%27%2F%3E%0A%3Ctext%20x%3D%2760%27%20y%3D%2766%27%20font-size%3D%2722%27%20text-anchor%3D%27middle%27%20fill%3D%27%23000000%27%20font-family%3D%27Roboto%2CArial%2Csans-serif%27%3ELKKF%3C%2Ftext%3E%0A%3C%2Fsvg%3E"
+            alt="LKKF logotipas"
+            loading="lazy"
+          />
+          <span>Lietuvos Kyokushin Karatė federacija</span>
+        </a>
+        <nav>
+          <button
+            class="burger"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            aria-label="Perjungti navigacijos meniu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul id="primary-navigation" class="nav-links">
+            <li><a href="index.html">Pradžia</a></li>
+            <li><a href="members.html">LKKF nariai</a></li>
+            <li><a href="events.html" aria-current="page">Renginiai</a></li>
+            <li><a href="documents.html">Dokumentai</a></li>
+            <li><a href="contact.html">Kontaktai</a></li>
+            <li><a href="https://is.kyokushin.lt" target="_blank" rel="noopener">IS</a></li>
+            <li>
+              <a href="https://www.facebook.com/kyokushin.lietuva" target="_blank" rel="noopener"
+                >Facebook</a
+              >
+            </li>
+            <li><a href="https://shinkyokushin.lt" target="_blank" rel="noopener">Draugiški klubai</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn btn-secondary" href="documents.html#anti-doping">Anti-dopingo informacija</a>
+          <a class="btn" href="contact.html">Prisijunkite prie federacijos</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="renginiai">
+        <div class="container">
+          <header class="section-header">
+            <div>
+              <h1>Renginių kalendorius</h1>
+              <p>Naujausi turnyrai, mokymai ir stovyklos. Registruokitės ir dalyvaukite.</p>
+            </div>
+            <div class="filter-group" id="event-filters">
+              <div style="flex: 1 1 180px">
+                <label for="event-type">Renginio tipas</label>
+                <select id="event-type" name="type">
+                  <option value="">Visi</option>
+                  <option value="varzybos">Varžybos</option>
+                  <option value="mokymai">Mokymai</option>
+                  <option value="stovykla">Stovyklos</option>
+                </select>
+              </div>
+              <div style="flex: 1 1 180px">
+                <label for="event-location">Vieta</label>
+                <input type="text" id="event-location" name="location" placeholder="Miestas" />
+              </div>
+              <div style="flex: 1 1 180px">
+                <label for="event-date">Laikotarpis</label>
+                <input type="month" id="event-date" name="date" />
+              </div>
+            </div>
+          </header>
+
+          <section aria-label="Artėjantys renginiai" class="grid" id="event-list" style="margin-bottom: 3rem"></section>
+
+          <section class="section" style="padding: 0">
+            <header class="section-header">
+              <div>
+                <h2>Praeities renginiai</h2>
+                <p>Peržiūrėkite galerijas ir rezultatus.</p>
+              </div>
+            </header>
+            <div class="grid grid-3" id="past-events"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="section" id="registracija">
+        <div class="container">
+          <header class="section-header">
+            <div>
+              <h2>Renginių registracija</h2>
+              <p>Greita registracijos forma dalyvavimui varžybose ar seminaruose.</p>
+            </div>
+          </header>
+          <div class="card">
+            <form id="registration-form" novalidate>
+              <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem">
+                <div>
+                  <label for="participant-name">Vardas ir pavardė</label>
+                  <input type="text" id="participant-name" name="name" placeholder="Jūsų vardas" required />
+                </div>
+                <div>
+                  <label for="participant-email">El. paštas</label>
+                  <input type="email" id="participant-email" name="email" placeholder="el.pastas@pavyzdys.lt" required />
+                </div>
+                <div>
+                  <label for="participant-club">Klubas</label>
+                  <input type="text" id="participant-club" name="club" placeholder="Jūsų klubas" required />
+                </div>
+                <div>
+                  <label for="participant-event">Pasirinktas renginys</label>
+                  <select id="participant-event" name="event" required>
+                    <option value="">Pasirinkite renginį</option>
+                  </select>
+                </div>
+              </div>
+              <div style="margin-top: 1.5rem">
+                <label for="participant-notes">Papildoma informacija</label>
+                <textarea id="participant-notes" name="notes" placeholder="Pasidalinkite pastabomis"></textarea>
+              </div>
+              <button class="btn" type="submit" style="margin-top: 1.5rem">Registruotis</button>
+              <p class="status-message" id="registration-status" role="status"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a class="logo" href="index.html" aria-label="Pagrindinis puslapis">
+              <img
+                src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20120%20120%27%3E%0A%3Ccircle%20cx%3D%2760%27%20cy%3D%2760%27%20r%3D%2755%27%20fill%3D%27%23ffffff%27%20stroke%3D%27%23c1121f%27%20stroke-width%3D%278%27%2F%3E%0A%3Cpath%20d%3D%27M60%2015%20L75%20105%20L60%2090%20L45%20105%20Z%27%20fill%3D%27%23c1121f%27%2F%3E%0A%3Ctext%20x%3D%2760%27%20y%3D%2766%27%20font-size%3D%2722%27%20text-anchor%3D%27middle%27%20fill%3D%27%23000000%27%20font-family%3D%27Roboto%2CArial%2Csans-serif%27%3ELKKF%3C%2Ftext%3E%0A%3C%2Fsvg%3E"
+                alt="LKKF logotipas"
+                loading="lazy"
+              />
+              <span>LKKF</span>
+            </a>
+            <p>Renginių kalendorius ir registracijos formos visiems federacijos nariams.</p>
+          </div>
+          <div>
+            <h4>Kontaktai</h4>
+            <ul style="list-style: none; padding: 0; margin: 0">
+              <li>El. paštas: <a href="mailto:renginiai@kyokushin.lt">renginiai@kyokushin.lt</a></li>
+              <li>Tel.: <a href="tel:+37061122334">+370 611 22334</a></li>
+              <li>Adresas: Ozo g. 18, Vilnius</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Naudingi failai</h4>
+            <ul style="list-style: none; padding: 0; margin: 0">
+              <li><a href="documents.html#forms">Paraiškų formos</a></li>
+              <li><a href="documents.html#anti-doping">Anti-dopingo politika</a></li>
+              <li><a href="https://is.kyokushin.lt" target="_blank" rel="noopener">Informacinė sistema</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Sekite mus</h4>
+            <div class="social-links" aria-label="Socialiniai tinklai">
+              <a href="https://www.facebook.com/kyokushin.lietuva" target="_blank" rel="noopener" aria-label="Facebook"
+                >Fb</a
+              >
+              <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube">Yt</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="current-year"></span> Lietuvos Kyokushin Karatė federacija.</span>
+          <a href="documents.html#privacy">Teisinė informacija</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
